@@ -13,6 +13,7 @@ interface LandingPageProps {
 export default function LandingPage({ onGetStarted }: LandingPageProps) {
   const [activePage, setActivePage] = useState<LandingTab>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [focusMode, setFocusMode] = useState<'heart' | 'sleep' | 'hydration'>('heart');
 
   const stats = [
     { value: '10.000+', label: 'Pengguna Aktif' },
@@ -27,6 +28,29 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
     { id: 'testimonials', label: 'Testimoni' },
     { id: 'about', label: 'Tentang Kami' }
   ];
+
+  const insightModes = {
+    heart: {
+      label: 'Detak Jantung',
+      metric: '72 BPM',
+      description: 'Denyut stabil dan berada di zona aman sepanjang hari.',
+      highlight: 'Kesehatan jantung terpantaudi 24/7'
+    },
+    sleep: {
+      label: 'Tidur',
+      metric: '7.8 jam',
+      description: 'Ritme tidur cukup membantu pemulihan tubuh dan fokus.',
+      highlight: 'Durasi tidur ideal untuk pemulihan'
+    },
+    hydration: {
+      label: 'Hidrasi',
+      metric: '86%',
+      description: 'Asupan cairan sudah cukup, tetap jaga keseimbangan harian.',
+      highlight: 'Kondisi cairan tubuh terjaga dengan baik'
+    }
+  } as const;
+
+  const activeInsight = insightModes[focusMode];
 
   const handleNav = (page: LandingTab) => {
     setActivePage(page);
@@ -207,6 +231,83 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
                     <div className="text-blue-100 font-medium">{stat.label}</div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Interactive Wellness Insight */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-5 text-sm font-medium">
+                  <Heart className="w-4 h-4" />
+                  Insight Kesehatan Real-Time
+                </div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Buat monitoring terasa lebih hidup dan mudah dipahami</h2>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Antarmuka yang lebih interaktif membantu keluarga dan tenaga medis melihat kondisi kesehatan dengan cepat, tanpa kehilangan nuansa yang penting.
+                </p>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {[
+                    { title: 'Akurat', text: 'Data real-time dan notifikasi cepat' },
+                    { title: 'Mudah', text: 'Navigasi sederhana untuk semua usia' },
+                    { title: 'Aman', text: 'Informasi tersusun rapi dan terarah' }
+                  ].map((item) => (
+                    <div key={item.title} className="rounded-2xl border border-gray-200 bg-gray-50 p-4">
+                      <div className="font-semibold text-gray-900">{item.title}</div>
+                      <div className="text-sm text-gray-600 mt-1">{item.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-[28px] bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 p-6 text-white shadow-2xl">
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { id: 'heart', label: 'Jantung' },
+                    { id: 'sleep', label: 'Tidur' },
+                    { id: 'hydration', label: 'Hidrasi' }
+                  ].map((mode) => (
+                    <button
+                      key={mode.id}
+                      onClick={() => setFocusMode(mode.id as 'heart' | 'sleep' | 'hydration')}
+                      className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                        focusMode === mode.id
+                          ? 'bg-white text-slate-900 shadow-lg'
+                          : 'bg-white/10 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {mode.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="mt-6 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-blue-100">Status Hari Ini</span>
+                    <span className="rounded-full bg-emerald-400/20 px-3 py-1 text-sm font-medium text-emerald-200">
+                      Stabil
+                    </span>
+                  </div>
+                  <div className="mt-4 flex items-end justify-between gap-4">
+                    <div>
+                      <div className="text-4xl font-bold">{activeInsight.metric}</div>
+                      <div className="text-sm text-blue-100 mt-1">{activeInsight.label}</div>
+                    </div>
+                    <div className="rounded-xl bg-slate-950/30 px-4 py-3 text-sm text-slate-100">
+                      {activeInsight.highlight}
+                    </div>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-slate-200">{activeInsight.description}</p>
+                  <div className="mt-5 grid grid-cols-3 gap-3">
+                    {["08:00", "12:00", "20:00"].map((time) => (
+                      <div key={time} className="rounded-xl bg-slate-950/20 p-3 text-center">
+                        <div className="text-xs text-blue-100">{time}</div>
+                        <div className="mt-1 text-sm font-semibold">{focusMode === 'heart' ? 'Normal' : focusMode === 'sleep' ? 'Baik' : 'Cukup'}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
