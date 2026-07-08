@@ -54,10 +54,10 @@ export default function AboutPage({ onGetStarted }: AboutPageProps) {
       bio: '15 tahun pengalaman menangani pasien lansia mendorong beliau menciptakan solusi monitoring jarak jauh yang lebih baik.'
     },
     {
-      name: 'Ir. Maya Sari Dewi',
+      name: 'Iim Ibrahim',
       role: 'CTO & Co-Founder',
-      specialty: 'Insinyur Biomedika',
-      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format',
+      specialty: 'Insinyur Infrastruktur & IoT Medis',
+      photo: 'C:\Users\West Java\Downloads\im',
       bio: 'Alumni ITB dengan pengalaman 10 tahun di IoT medis dan pengembangan sensor kesehatan presisi tinggi.'
     },
     {
