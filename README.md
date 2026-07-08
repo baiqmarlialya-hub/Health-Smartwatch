@@ -1,53 +1,72 @@
-
 # HealthWatch Pro
 
-A polished React-based interface for a health smartwatch experience, developed as a personal portfolio project to demonstrate modern UI design, interactive dashboard components, and clear information architecture for health monitoring.
+Antarmuka berbasis React yang dirancang secara modern untuk pengalaman penggunaan smartwatch kesehatan. Proyek ini dikembangkan sebagai portofolio pribadi untuk menunjukkan kemampuan dalam merancang antarmuka pengguna (UI) modern, dashboard interaktif, serta arsitektur informasi yang jelas untuk pemantauan kesehatan.
 
-## Project Overview
-HealthWatch Pro presents a conceptual health monitoring dashboard that highlights essential wellness indicators such as heart rate, sleep, activity, and alert notifications. The project focuses on delivering a refined user experience with a clean, modern visual style suitable for both personal and professional presentation.
+## Gambaran Proyek
 
-## Key Features
-- Modern landing page experience with clear product storytelling
-- Interactive dashboard layout for health-related metrics
-- Notification center for important alerts and reminders
-- Patient profile and connected-user overview
-- Responsive interface with light and dark theme support
-- Route-based navigation for a more app-like experience
+HealthWatch Pro merupakan dashboard konseptual untuk pemantauan kesehatan yang menampilkan berbagai indikator kebugaran penting, seperti detak jantung, kualitas tidur, aktivitas harian, dan notifikasi peringatan. Proyek ini berfokus pada penyediaan pengalaman pengguna (User Experience/UX) yang nyaman melalui tampilan yang bersih, modern, dan profesional sehingga cocok digunakan sebagai portofolio maupun referensi pengembangan aplikasi kesehatan.
 
-## Technology Stack
-- React
-- Vite
-- Tailwind CSS
-- Lucide Icons
-- React Router DOM
+## Fitur Utama
 
-## Installation
-1. Clone the repository
+* Halaman utama (Landing Page) modern dengan penyampaian informasi produk yang jelas.
+* Dashboard interaktif untuk menampilkan berbagai metrik kesehatan.
+* Pusat notifikasi untuk memberikan peringatan dan pengingat penting.
+* Profil pasien beserta informasi pengguna yang terhubung.
+* Antarmuka responsif dengan dukungan tema terang (Light Mode) dan gelap (Dark Mode).
+* Navigasi berbasis routing sehingga memberikan pengalaman seperti aplikasi (App-Like Experience).
+
+## Teknologi yang Digunakan
+
+* React
+* Vite
+* Tailwind CSS
+* Lucide Icons
+* React Router DOM
+
+## Instalasi
+
+1. Clone repositori
+
    ```bash
    git clone https://github.com/iimibrahim-netizen/Health-Smartwatch.git
    ```
-2. Install dependencies
+
+2. Instal seluruh dependensi
+
    ```bash
    npm install
    ```
-3. Run the development server
+
+3. Jalankan server pengembangan
+
    ```bash
    npm run dev
    ```
-4. Open the app in your browser at
+
+4. Buka aplikasi melalui browser pada alamat
+
    ```text
    http://localhost:5173
    ```
 
-## Project Structure
-- src/app/components — reusable interface components
-- src/app/App.tsx — main application flow and routing
-- src/main.tsx — application entry point
+## Struktur Proyek
 
-## Development Notes
-This project serves as a frontend prototype and can be extended with backend integration, authentication, real-time data synchronization, and more advanced analytics features.
+* **src/app/components** — Berisi komponen antarmuka yang dapat digunakan kembali (Reusable Components).
+* **src/app/App.tsx** — Mengatur alur utama aplikasi dan konfigurasi routing.
+* **src/main.tsx** — Titik masuk (Entry Point) aplikasi React.
 
-## Design Reference
-The original visual concept was inspired by the Figma prototype:
+## Catatan Pengembangan
+
+HealthWatch Pro merupakan prototipe frontend yang masih dapat dikembangkan lebih lanjut dengan berbagai fitur tambahan, seperti:
+
+* Integrasi dengan backend.
+* Sistem autentikasi pengguna.
+* Sinkronisasi data secara real-time.
+* Analisis data kesehatan yang lebih komprehensif.
+* Integrasi dengan perangkat wearable atau smartwatch yang sebenarnya.
+
+## Referensi Desain
+
+Konsep visual proyek ini terinspirasi dari prototipe Figma berikut:
+
 https://www.figma.com/design/99hYNkJO9VDVDduhZuv5Yg/Health-Smartwatch-Prototype
-  
