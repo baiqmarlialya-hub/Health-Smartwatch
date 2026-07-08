@@ -4,7 +4,7 @@ Antarmuka berbasis React yang dirancang secara modern untuk pengalaman penggunaa
 
 ## Gambaran Proyek
 
-HealthWatch Pro merupakan dashboard konseptual untuk pemantauan kesehatan yang menampilkan berbagai indikator kebugaran penting, seperti detak jantung, kualitas tidur, aktivitas harian, dan notifikasi peringatan. Proyek ini berfokus pada penyediaan pengalaman pengguna (User Experience/UX) yang nyaman melalui tampilan yang bersih, modern, dan profesional sehingga cocok digunakan sebagai portofolio maupun referensi pengembangan aplikasi kesehatan.
+HealthWatch Pro dirancang untuk pengguna yang tinggal sendiri dan orang tua yang perlu pemantau  kesehatan jarak jauh secara intensif oleh keluarga. HealthWatch Pro merupakan dashboard konseptual untuk pemantauan kesehatan yang menampilkan berbagai indikator kebugaran penting, seperti detak jantung, kualitas tidur, aktivitas harian, dan notifikasi peringatan yang terintgrasi datanya dengan keluarga dan tenaga medis. Proyek ini berfokus pada penyediaan pengalaman pengguna (User Experience/UX) yang nyaman melalui tampilan yang bersih, modern, dan profesional sehingga cocok digunakan sebagai portofolio maupun referensi pengembangan aplikasi kesehatan.
 
 ## Fitur Utama
 
